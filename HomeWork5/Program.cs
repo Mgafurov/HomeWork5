@@ -404,7 +404,7 @@ class Program
     }
 }*/
 
-using System;
+/*using System;
 using System.Linq;
 
 class Program
@@ -421,5 +421,29 @@ class Program
     {
         int count = input.Count(char.IsUpper);
         return count;
+    }
+}*/
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Введите строку:");
+        string inputString = Console.ReadLine();
+
+        int countUppercaseLetters = 0;
+        for (int i = 0; i < inputString.Length; i++)
+        {
+            char currentChar = inputString[i];
+            if (currentChar >= 'А' && currentChar <= 'Я')
+            {
+                countUppercaseLetters++;
+            }
+        }
+
+        Console.WriteLine("Количество заглавных букв в строке: " + countUppercaseLetters);
+        Console.ReadKey();
     }
 }
